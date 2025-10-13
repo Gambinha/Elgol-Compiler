@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "scripts": {
+    "analisar-lex": "node src/main.js src/exemplo.lg"
+  },
+  "dependencies": {
+    "antlr4": "^4.13.2"
+  }
+}
