@@ -1,12 +1,12 @@
 lexer grammar ElgolLexer;
 
 // ===================================================================
-// I. Declaração de Tokens
+// I. Declaração de tokens “virtuais” (apenas nomes)
 // ===================================================================
-tokens { ID, ERRO_LEXICO }
+tokens { ERRO_LEXICO }
 
 // ===================================================================
-// II. Palavras Reservadas (sem alteração)
+// II. Palavras Reservadas
 // ===================================================================
 ELGIO       : 'elgio';
 INTEIRO     : 'inteiro';
@@ -24,42 +24,27 @@ IGUAL       : 'igual';
 DIFERENTE   : 'diferente';
 
 // ===================================================================
-// III. Tokens do Modo Padrão (sem alteração)
+// III. Identificadores e Funções
 // ===================================================================
+// Variáveis: Teste, Lixo, Variavel, etc.
+// Começam com maiúscula e têm pelo menos 3 letras totais
+ID          : [A-Z] [a-zA-Z]{2,} ;
 
-IDENTIFICADOR_POTENCIAL: [A-Z] [a-zA-Z0-9_]*
-    {
-        const rule1 = this.text.length >= 3;
-        const rule2 = /^[a-zA-Z]+$/.test(this.text);
-
-        if (rule1 && rule2) {
-            this.type = ElgolLexer.ID;
-        } else {
-            this.type = ElgolLexer.ERRO_LEXICO;
-        }
-    };
-
-FUNCAO_POTENCIAL: '_' [A-Z] [a-zA-Z0-9_]*
-    {
-        const functionName = this.text.substring(1);
-        
-        const rule1 = functionName.length >= 3;
-        const rule2 = /^[a-zA-Z]+$/.test(functionName);
-
-        if (rule1 && rule2) {
-            this.type = ElgolLexer.FUNCAO;
-        } else {
-            this.type = ElgolLexer.ERRO_LEXICO;
-        }
-    };
-
-FUNCAO: '_' [A-Z] [a-zA-Z][a-zA-Z][a-zA-Z]*;
-
-NUM: [1-9] [0-9]*;
-NUMERO_INVALIDO: '0' [0-9]* -> type(ERRO_LEXICO);
+// Funções: _Soma, _Fazalgo, etc.
+// '_' + letra maiúscula + pelo menos mais 2 letras
+FUNCAO      : '_' [A-Z] [a-zA-Z]{2,} ;
 
 // ===================================================================
-// IV. Operadores e Símbolos (sem alteração)
+// IV. Números
+// ===================================================================
+// Números válidos: 1, 2, 10, 345, etc. (não pode começar com 0)
+NUM         : [1-9] [0-9]* ;
+
+// Números inválidos começando com 0 viram ERRO_LEXICO
+NUMERO_INVALIDO : '0' [0-9]* -> type(ERRO_LEXICO);
+
+// ===================================================================
+// V. Operadores e Símbolos
 // ===================================================================
 ASSIGN      : '=';
 MAIS        : '+';
@@ -72,9 +57,12 @@ PONTO       : '.';
 VIRGULA     : ',';
 
 // ===================================================================
-// V. Itens a serem Ignorados (sem alteração)
+// VI. Ignorados
 // ===================================================================
-COMENTARIO: '#' ~[\r\n]* -> skip;
-WS:         [ \t\r\n]+ -> skip;
+COMENTARIO  : '#' ~[\r\n]* -> skip;
+WS          : [ \t\r\n]+ -> skip;
 
-ERRO_INESPERADO: . -> type(ERRO_LEXICO);
+// ===================================================================
+// VII. Qualquer outra coisa é erro léxico
+// ===================================================================
+ERRO_INESPERADO : . -> type(ERRO_LEXICO);
