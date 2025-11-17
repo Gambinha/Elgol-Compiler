@@ -1,63 +1,63 @@
-// Generated from ElgolParser.g4 by ANTLR 4.13.1
+// Generated from util/ElgolParser.g4 by ANTLR 4.13.1
 // jshint ignore: start
 import antlr4 from 'antlr4';
 import ElgolParserListener from './ElgolParserListener.js';
-const serializedATN = [4,1,29,194,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,
+const serializedATN = [4,1,31,196,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,
 4,2,5,7,5,2,6,7,6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,
 2,13,7,13,2,14,7,14,2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,2,19,7,19,2,
 20,7,20,2,21,7,21,2,22,7,22,1,0,5,0,48,8,0,10,0,12,0,51,9,0,1,0,1,0,1,0,
 1,1,1,1,1,1,1,1,3,1,60,8,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,1,2,1,2,5,
 2,73,8,2,10,2,12,2,76,9,2,1,3,1,3,1,3,1,4,1,4,1,4,1,4,1,4,1,4,1,5,5,5,88,
-8,5,10,5,12,5,91,9,5,1,6,1,6,1,6,1,6,1,6,3,6,98,8,6,1,7,1,7,1,7,1,7,1,8,
-1,8,1,8,1,8,1,8,1,9,1,9,1,9,1,9,1,9,1,10,1,10,1,10,1,10,5,10,118,8,10,10,
-10,12,10,121,9,10,1,11,1,11,1,12,1,12,1,12,1,12,3,12,129,8,12,1,13,1,13,
-1,13,3,13,134,8,13,1,13,1,13,1,14,1,14,1,14,5,14,141,8,14,10,14,12,14,144,
-9,14,1,15,1,15,1,16,1,16,1,16,1,16,5,16,152,8,16,10,16,12,16,155,9,16,1,
-17,1,17,1,18,1,18,1,18,1,18,1,19,1,19,1,20,1,20,1,21,1,21,1,21,1,21,1,21,
-1,21,1,21,1,21,1,21,1,22,1,22,1,22,1,22,1,22,1,22,1,22,1,22,1,22,1,22,1,
-22,1,22,1,22,1,22,1,22,1,22,1,22,1,22,1,22,0,0,23,0,2,4,6,8,10,12,14,16,
-18,20,22,24,26,28,30,32,34,36,38,40,42,44,0,3,1,0,20,23,3,0,4,4,16,16,18,
-18,1,0,12,15,185,0,49,1,0,0,0,2,55,1,0,0,0,4,69,1,0,0,0,6,77,1,0,0,0,8,80,
-1,0,0,0,10,89,1,0,0,0,12,97,1,0,0,0,14,99,1,0,0,0,16,103,1,0,0,0,18,108,
-1,0,0,0,20,113,1,0,0,0,22,122,1,0,0,0,24,128,1,0,0,0,26,130,1,0,0,0,28,137,
-1,0,0,0,30,145,1,0,0,0,32,147,1,0,0,0,34,156,1,0,0,0,36,158,1,0,0,0,38,162,
-1,0,0,0,40,164,1,0,0,0,42,166,1,0,0,0,44,175,1,0,0,0,46,48,3,2,1,0,47,46,
-1,0,0,0,48,51,1,0,0,0,49,47,1,0,0,0,49,50,1,0,0,0,50,52,1,0,0,0,51,49,1,
-0,0,0,52,53,3,8,4,0,53,54,5,0,0,1,54,1,1,0,0,0,55,56,5,3,0,0,56,57,5,17,
-0,0,57,59,5,24,0,0,58,60,3,4,2,0,59,58,1,0,0,0,59,60,1,0,0,0,60,61,1,0,0,
-0,61,62,5,25,0,0,62,63,5,26,0,0,63,64,5,10,0,0,64,65,5,26,0,0,65,66,3,10,
-5,0,66,67,5,11,0,0,67,68,5,26,0,0,68,3,1,0,0,0,69,74,3,6,3,0,70,71,5,27,
-0,0,71,73,3,6,3,0,72,70,1,0,0,0,73,76,1,0,0,0,74,72,1,0,0,0,74,75,1,0,0,
-0,75,5,1,0,0,0,76,74,1,0,0,0,77,78,5,3,0,0,78,79,5,16,0,0,79,7,1,0,0,0,80,
-81,5,10,0,0,81,82,5,26,0,0,82,83,3,10,5,0,83,84,5,11,0,0,84,85,5,26,0,0,
-85,9,1,0,0,0,86,88,3,12,6,0,87,86,1,0,0,0,88,91,1,0,0,0,89,87,1,0,0,0,89,
-90,1,0,0,0,90,11,1,0,0,0,91,89,1,0,0,0,92,98,3,14,7,0,93,98,3,16,8,0,94,
-98,3,18,9,0,95,98,3,42,21,0,96,98,3,44,22,0,97,92,1,0,0,0,97,93,1,0,0,0,
-97,94,1,0,0,0,97,95,1,0,0,0,97,96,1,0,0,0,98,13,1,0,0,0,99,100,5,3,0,0,100,
-101,5,16,0,0,101,102,5,26,0,0,102,15,1,0,0,0,103,104,5,16,0,0,104,105,5,
-19,0,0,105,106,3,20,10,0,106,107,5,26,0,0,107,17,1,0,0,0,108,109,5,2,0,0,
-109,110,5,19,0,0,110,111,3,32,16,0,111,112,5,26,0,0,112,19,1,0,0,0,113,119,
-3,24,12,0,114,115,3,22,11,0,115,116,3,24,12,0,116,118,1,0,0,0,117,114,1,
-0,0,0,118,121,1,0,0,0,119,117,1,0,0,0,119,120,1,0,0,0,120,21,1,0,0,0,121,
-119,1,0,0,0,122,123,7,0,0,0,123,23,1,0,0,0,124,129,5,18,0,0,125,129,5,4,
-0,0,126,129,5,16,0,0,127,129,3,26,13,0,128,124,1,0,0,0,128,125,1,0,0,0,128,
-126,1,0,0,0,128,127,1,0,0,0,129,25,1,0,0,0,130,131,5,17,0,0,131,133,5,24,
-0,0,132,134,3,28,14,0,133,132,1,0,0,0,133,134,1,0,0,0,134,135,1,0,0,0,135,
-136,5,25,0,0,136,27,1,0,0,0,137,142,3,30,15,0,138,139,5,27,0,0,139,141,3,
-30,15,0,140,138,1,0,0,0,141,144,1,0,0,0,142,140,1,0,0,0,142,143,1,0,0,0,
-143,29,1,0,0,0,144,142,1,0,0,0,145,146,7,1,0,0,146,31,1,0,0,0,147,153,3,
-34,17,0,148,149,3,22,11,0,149,150,3,34,17,0,150,152,1,0,0,0,151,148,1,0,
-0,0,152,155,1,0,0,0,153,151,1,0,0,0,153,154,1,0,0,0,154,33,1,0,0,0,155,153,
-1,0,0,0,156,157,7,1,0,0,157,35,1,0,0,0,158,159,3,38,19,0,159,160,3,40,20,
-0,160,161,3,38,19,0,161,37,1,0,0,0,162,163,7,1,0,0,163,39,1,0,0,0,164,165,
-7,2,0,0,165,41,1,0,0,0,166,167,5,6,0,0,167,168,3,36,18,0,168,169,5,26,0,
-0,169,170,5,10,0,0,170,171,5,26,0,0,171,172,3,10,5,0,172,173,5,11,0,0,173,
-174,5,26,0,0,174,43,1,0,0,0,175,176,5,7,0,0,176,177,3,36,18,0,177,178,5,
-26,0,0,178,179,5,8,0,0,179,180,5,26,0,0,180,181,5,10,0,0,181,182,5,26,0,
-0,182,183,3,10,5,0,183,184,5,11,0,0,184,185,5,26,0,0,185,186,5,9,0,0,186,
-187,5,26,0,0,187,188,5,10,0,0,188,189,5,26,0,0,189,190,3,10,5,0,190,191,
-5,11,0,0,191,192,5,26,0,0,192,45,1,0,0,0,10,49,59,74,89,97,119,128,133,142,
-153];
+8,5,10,5,12,5,91,9,5,1,6,1,6,1,6,1,6,1,6,1,6,1,6,3,6,100,8,6,1,7,1,7,1,7,
+1,7,1,8,1,8,1,8,1,8,1,8,1,9,1,9,1,9,1,9,1,9,1,10,1,10,1,10,1,10,5,10,120,
+8,10,10,10,12,10,123,9,10,1,11,1,11,1,12,1,12,1,12,1,12,3,12,131,8,12,1,
+13,1,13,1,13,3,13,136,8,13,1,13,1,13,1,14,1,14,1,14,5,14,143,8,14,10,14,
+12,14,146,9,14,1,15,1,15,1,16,1,16,1,16,1,16,5,16,154,8,16,10,16,12,16,157,
+9,16,1,17,1,17,1,18,1,18,1,18,1,18,1,19,1,19,1,20,1,20,1,21,1,21,1,21,1,
+21,1,21,1,21,1,21,1,21,1,21,1,22,1,22,1,22,1,22,1,22,1,22,1,22,1,22,1,22,
+1,22,1,22,1,22,1,22,1,22,1,22,1,22,1,22,1,22,1,22,0,0,23,0,2,4,6,8,10,12,
+14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,0,3,1,0,22,25,3,0,1,1,5,
+5,20,20,1,0,13,16,188,0,49,1,0,0,0,2,55,1,0,0,0,4,69,1,0,0,0,6,77,1,0,0,
+0,8,80,1,0,0,0,10,89,1,0,0,0,12,99,1,0,0,0,14,101,1,0,0,0,16,105,1,0,0,0,
+18,110,1,0,0,0,20,115,1,0,0,0,22,124,1,0,0,0,24,130,1,0,0,0,26,132,1,0,0,
+0,28,139,1,0,0,0,30,147,1,0,0,0,32,149,1,0,0,0,34,158,1,0,0,0,36,160,1,0,
+0,0,38,164,1,0,0,0,40,166,1,0,0,0,42,168,1,0,0,0,44,177,1,0,0,0,46,48,3,
+2,1,0,47,46,1,0,0,0,48,51,1,0,0,0,49,47,1,0,0,0,49,50,1,0,0,0,50,52,1,0,
+0,0,51,49,1,0,0,0,52,53,3,8,4,0,53,54,5,0,0,1,54,1,1,0,0,0,55,56,5,4,0,0,
+56,57,5,19,0,0,57,59,5,26,0,0,58,60,3,4,2,0,59,58,1,0,0,0,59,60,1,0,0,0,
+60,61,1,0,0,0,61,62,5,27,0,0,62,63,5,28,0,0,63,64,5,11,0,0,64,65,5,28,0,
+0,65,66,3,10,5,0,66,67,5,12,0,0,67,68,5,28,0,0,68,3,1,0,0,0,69,74,3,6,3,
+0,70,71,5,29,0,0,71,73,3,6,3,0,72,70,1,0,0,0,73,76,1,0,0,0,74,72,1,0,0,0,
+74,75,1,0,0,0,75,5,1,0,0,0,76,74,1,0,0,0,77,78,5,4,0,0,78,79,5,1,0,0,79,
+7,1,0,0,0,80,81,5,11,0,0,81,82,5,28,0,0,82,83,3,10,5,0,83,84,5,12,0,0,84,
+85,5,28,0,0,85,9,1,0,0,0,86,88,3,12,6,0,87,86,1,0,0,0,88,91,1,0,0,0,89,87,
+1,0,0,0,89,90,1,0,0,0,90,11,1,0,0,0,91,89,1,0,0,0,92,100,3,14,7,0,93,100,
+3,16,8,0,94,100,3,18,9,0,95,100,3,42,21,0,96,100,3,44,22,0,97,98,5,1,0,0,
+98,100,5,28,0,0,99,92,1,0,0,0,99,93,1,0,0,0,99,94,1,0,0,0,99,95,1,0,0,0,
+99,96,1,0,0,0,99,97,1,0,0,0,100,13,1,0,0,0,101,102,5,4,0,0,102,103,5,1,0,
+0,103,104,5,28,0,0,104,15,1,0,0,0,105,106,5,1,0,0,106,107,5,21,0,0,107,108,
+3,20,10,0,108,109,5,28,0,0,109,17,1,0,0,0,110,111,5,3,0,0,111,112,5,21,0,
+0,112,113,3,32,16,0,113,114,5,28,0,0,114,19,1,0,0,0,115,121,3,24,12,0,116,
+117,3,22,11,0,117,118,3,24,12,0,118,120,1,0,0,0,119,116,1,0,0,0,120,123,
+1,0,0,0,121,119,1,0,0,0,121,122,1,0,0,0,122,21,1,0,0,0,123,121,1,0,0,0,124,
+125,7,0,0,0,125,23,1,0,0,0,126,131,5,20,0,0,127,131,5,5,0,0,128,131,5,1,
+0,0,129,131,3,26,13,0,130,126,1,0,0,0,130,127,1,0,0,0,130,128,1,0,0,0,130,
+129,1,0,0,0,131,25,1,0,0,0,132,133,5,19,0,0,133,135,5,26,0,0,134,136,3,28,
+14,0,135,134,1,0,0,0,135,136,1,0,0,0,136,137,1,0,0,0,137,138,5,27,0,0,138,
+27,1,0,0,0,139,144,3,30,15,0,140,141,5,29,0,0,141,143,3,30,15,0,142,140,
+1,0,0,0,143,146,1,0,0,0,144,142,1,0,0,0,144,145,1,0,0,0,145,29,1,0,0,0,146,
+144,1,0,0,0,147,148,7,1,0,0,148,31,1,0,0,0,149,155,3,34,17,0,150,151,3,22,
+11,0,151,152,3,34,17,0,152,154,1,0,0,0,153,150,1,0,0,0,154,157,1,0,0,0,155,
+153,1,0,0,0,155,156,1,0,0,0,156,33,1,0,0,0,157,155,1,0,0,0,158,159,7,1,0,
+0,159,35,1,0,0,0,160,161,3,38,19,0,161,162,3,40,20,0,162,163,3,38,19,0,163,
+37,1,0,0,0,164,165,7,1,0,0,165,39,1,0,0,0,166,167,7,2,0,0,167,41,1,0,0,0,
+168,169,5,7,0,0,169,170,3,36,18,0,170,171,5,28,0,0,171,172,5,11,0,0,172,
+173,5,28,0,0,173,174,3,10,5,0,174,175,5,12,0,0,175,176,5,28,0,0,176,43,1,
+0,0,0,177,178,5,8,0,0,178,179,3,36,18,0,179,180,5,28,0,0,180,181,5,9,0,0,
+181,182,5,28,0,0,182,183,5,11,0,0,183,184,5,28,0,0,184,185,3,10,5,0,185,
+186,5,12,0,0,186,187,5,28,0,0,187,188,5,10,0,0,188,189,5,28,0,0,189,190,
+5,11,0,0,190,191,5,28,0,0,191,192,3,10,5,0,192,193,5,12,0,0,193,194,5,28,
+0,0,194,45,1,0,0,0,10,49,59,74,89,99,121,130,135,144,155];
 
 
 const atn = new antlr4.atn.ATNDeserializer().deserialize(serializedATN);
@@ -69,15 +69,17 @@ const sharedContextCache = new antlr4.atn.PredictionContextCache();
 export default class ElgolParser extends antlr4.Parser {
 
     static grammarFileName = "ElgolParser.g4";
-    static literalNames = [ null, null, "'elgio'", "'inteiro'", "'zero'", 
+    static literalNames = [ null, null, null, "'elgio'", "'inteiro'", "'zero'", 
                             "'comp'", "'enquanto'", "'se'", "'entao'", "'senao'", 
                             "'inicio'", "'fim'", "'maior'", "'menor'", "'igual'", 
-                            "'diferente'", null, null, null, "'='", "'+'", 
-                            "'-'", "'x'", "'/'", "'('", "')'", "'.'", "','" ];
-    static symbolicNames = [ null, "ERRO_LEXICO", "ELGIO", "INTEIRO", "ZERO", 
-                             "COMP", "ENQUANTO", "SE", "ENTAO", "SENAO", 
-                             "INICIO", "FIM", "MAIOR", "MENOR", "IGUAL", 
-                             "DIFERENTE", "ID", "FUNCAO", "NUM", "ASSIGN", 
+                            "'diferente'", null, null, null, null, "'='", 
+                            "'+'", "'-'", "'x'", "'/'", "'('", "')'", "'.'", 
+                            "','" ];
+    static symbolicNames = [ null, "ID", "ERRO_LEXICO", "ELGIO", "INTEIRO", 
+                             "ZERO", "COMP", "ENQUANTO", "SE", "ENTAO", 
+                             "SENAO", "INICIO", "FIM", "MAIOR", "MENOR", 
+                             "IGUAL", "DIFERENTE", "IDENTIFICADOR_POTENCIAL", 
+                             "FUNCAO_POTENCIAL", "FUNCAO", "NUM", "ASSIGN", 
                              "MAIS", "MENOS", "MULT", "DIV", "LPAREN", "RPAREN", 
                              "PONTO", "VIRGULA", "COMENTARIO", "WS" ];
     static ruleNames = [ "program", "functionDecl", "paramList", "param", 
@@ -106,7 +108,7 @@ export default class ElgolParser extends antlr4.Parser {
 	        this.state = 49;
 	        this._errHandler.sync(this);
 	        _la = this._input.LA(1);
-	        while(_la===3) {
+	        while(_la===4) {
 	            this.state = 46;
 	            this.functionDecl();
 	            this.state = 51;
@@ -148,7 +150,7 @@ export default class ElgolParser extends antlr4.Parser {
 	        this.state = 59;
 	        this._errHandler.sync(this);
 	        _la = this._input.LA(1);
-	        if(_la===3) {
+	        if(_la===4) {
 	            this.state = 58;
 	            this.paramList();
 	        }
@@ -194,7 +196,7 @@ export default class ElgolParser extends antlr4.Parser {
 	        this.state = 74;
 	        this._errHandler.sync(this);
 	        _la = this._input.LA(1);
-	        while(_la===27) {
+	        while(_la===29) {
 	            this.state = 70;
 	            this.match(ElgolParser.VIRGULA);
 	            this.state = 71;
@@ -284,7 +286,7 @@ export default class ElgolParser extends antlr4.Parser {
 	        this.state = 89;
 	        this._errHandler.sync(this);
 	        _la = this._input.LA(1);
-	        while((((_la) & ~0x1f) === 0 && ((1 << _la) & 65740) !== 0)) {
+	        while((((_la) & ~0x1f) === 0 && ((1 << _la) & 410) !== 0)) {
 	            this.state = 86;
 	            this.statement();
 	            this.state = 91;
@@ -311,36 +313,48 @@ export default class ElgolParser extends antlr4.Parser {
 	    let localctx = new StatementContext(this, this._ctx, this.state);
 	    this.enterRule(localctx, 12, ElgolParser.RULE_statement);
 	    try {
-	        this.state = 97;
+	        this.state = 99;
 	        this._errHandler.sync(this);
-	        switch(this._input.LA(1)) {
-	        case 3:
+	        var la_ = this._interp.adaptivePredict(this._input,4,this._ctx);
+	        switch(la_) {
+	        case 1:
 	            this.enterOuterAlt(localctx, 1);
 	            this.state = 92;
 	            this.varDecl();
 	            break;
-	        case 16:
+
+	        case 2:
 	            this.enterOuterAlt(localctx, 2);
 	            this.state = 93;
 	            this.assignment();
 	            break;
-	        case 2:
+
+	        case 3:
 	            this.enterOuterAlt(localctx, 3);
 	            this.state = 94;
 	            this.elgioAssignment();
 	            break;
-	        case 6:
+
+	        case 4:
 	            this.enterOuterAlt(localctx, 4);
 	            this.state = 95;
 	            this.whileStmt();
 	            break;
-	        case 7:
+
+	        case 5:
 	            this.enterOuterAlt(localctx, 5);
 	            this.state = 96;
 	            this.ifStmt();
 	            break;
-	        default:
-	            throw new antlr4.error.NoViableAltException(this);
+
+	        case 6:
+	            this.enterOuterAlt(localctx, 6);
+	            this.state = 97;
+	            this.match(ElgolParser.ID);
+	            this.state = 98;
+	            this.match(ElgolParser.PONTO);
+	            break;
+
 	        }
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -363,11 +377,11 @@ export default class ElgolParser extends antlr4.Parser {
 	    this.enterRule(localctx, 14, ElgolParser.RULE_varDecl);
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 99;
-	        this.match(ElgolParser.INTEIRO);
-	        this.state = 100;
-	        this.match(ElgolParser.ID);
 	        this.state = 101;
+	        this.match(ElgolParser.INTEIRO);
+	        this.state = 102;
+	        this.match(ElgolParser.ID);
+	        this.state = 103;
 	        this.match(ElgolParser.PONTO);
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -390,13 +404,13 @@ export default class ElgolParser extends antlr4.Parser {
 	    this.enterRule(localctx, 16, ElgolParser.RULE_assignment);
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 103;
-	        this.match(ElgolParser.ID);
-	        this.state = 104;
-	        this.match(ElgolParser.ASSIGN);
 	        this.state = 105;
-	        this.mathExpr();
+	        this.match(ElgolParser.ID);
 	        this.state = 106;
+	        this.match(ElgolParser.ASSIGN);
+	        this.state = 107;
+	        this.mathExpr();
+	        this.state = 108;
 	        this.match(ElgolParser.PONTO);
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -419,13 +433,13 @@ export default class ElgolParser extends antlr4.Parser {
 	    this.enterRule(localctx, 18, ElgolParser.RULE_elgioAssignment);
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 108;
-	        this.match(ElgolParser.ELGIO);
-	        this.state = 109;
-	        this.match(ElgolParser.ASSIGN);
 	        this.state = 110;
-	        this.elgioExpr();
+	        this.match(ElgolParser.ELGIO);
 	        this.state = 111;
+	        this.match(ElgolParser.ASSIGN);
+	        this.state = 112;
+	        this.elgioExpr();
+	        this.state = 113;
 	        this.match(ElgolParser.PONTO);
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -449,17 +463,17 @@ export default class ElgolParser extends antlr4.Parser {
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 113;
+	        this.state = 115;
 	        this.mathOperand();
-	        this.state = 119;
+	        this.state = 121;
 	        this._errHandler.sync(this);
 	        _la = this._input.LA(1);
-	        while((((_la) & ~0x1f) === 0 && ((1 << _la) & 15728640) !== 0)) {
-	            this.state = 114;
+	        while((((_la) & ~0x1f) === 0 && ((1 << _la) & 62914560) !== 0)) {
+	            this.state = 116;
 	            this.mathOp();
-	            this.state = 115;
+	            this.state = 117;
 	            this.mathOperand();
-	            this.state = 121;
+	            this.state = 123;
 	            this._errHandler.sync(this);
 	            _la = this._input.LA(1);
 	        }
@@ -485,9 +499,9 @@ export default class ElgolParser extends antlr4.Parser {
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 122;
+	        this.state = 124;
 	        _la = this._input.LA(1);
-	        if(!((((_la) & ~0x1f) === 0 && ((1 << _la) & 15728640) !== 0))) {
+	        if(!((((_la) & ~0x1f) === 0 && ((1 << _la) & 62914560) !== 0))) {
 	        this._errHandler.recoverInline(this);
 	        }
 	        else {
@@ -514,27 +528,27 @@ export default class ElgolParser extends antlr4.Parser {
 	    let localctx = new MathOperandContext(this, this._ctx, this.state);
 	    this.enterRule(localctx, 24, ElgolParser.RULE_mathOperand);
 	    try {
-	        this.state = 128;
+	        this.state = 130;
 	        this._errHandler.sync(this);
 	        switch(this._input.LA(1)) {
-	        case 18:
+	        case 20:
 	            this.enterOuterAlt(localctx, 1);
-	            this.state = 124;
+	            this.state = 126;
 	            this.match(ElgolParser.NUM);
 	            break;
-	        case 4:
+	        case 5:
 	            this.enterOuterAlt(localctx, 2);
-	            this.state = 125;
+	            this.state = 127;
 	            this.match(ElgolParser.ZERO);
 	            break;
-	        case 16:
+	        case 1:
 	            this.enterOuterAlt(localctx, 3);
-	            this.state = 126;
+	            this.state = 128;
 	            this.match(ElgolParser.ID);
 	            break;
-	        case 17:
+	        case 19:
 	            this.enterOuterAlt(localctx, 4);
-	            this.state = 127;
+	            this.state = 129;
 	            this.funcCall();
 	            break;
 	        default:
@@ -562,19 +576,19 @@ export default class ElgolParser extends antlr4.Parser {
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 130;
+	        this.state = 132;
 	        this.match(ElgolParser.FUNCAO);
-	        this.state = 131;
-	        this.match(ElgolParser.LPAREN);
 	        this.state = 133;
+	        this.match(ElgolParser.LPAREN);
+	        this.state = 135;
 	        this._errHandler.sync(this);
 	        _la = this._input.LA(1);
-	        if((((_la) & ~0x1f) === 0 && ((1 << _la) & 327696) !== 0)) {
-	            this.state = 132;
+	        if((((_la) & ~0x1f) === 0 && ((1 << _la) & 1048610) !== 0)) {
+	            this.state = 134;
 	            this.argList();
 	        }
 
-	        this.state = 135;
+	        this.state = 137;
 	        this.match(ElgolParser.RPAREN);
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -598,17 +612,17 @@ export default class ElgolParser extends antlr4.Parser {
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 137;
+	        this.state = 139;
 	        this.arg();
-	        this.state = 142;
+	        this.state = 144;
 	        this._errHandler.sync(this);
 	        _la = this._input.LA(1);
-	        while(_la===27) {
-	            this.state = 138;
+	        while(_la===29) {
+	            this.state = 140;
 	            this.match(ElgolParser.VIRGULA);
-	            this.state = 139;
+	            this.state = 141;
 	            this.arg();
-	            this.state = 144;
+	            this.state = 146;
 	            this._errHandler.sync(this);
 	            _la = this._input.LA(1);
 	        }
@@ -634,9 +648,9 @@ export default class ElgolParser extends antlr4.Parser {
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 145;
+	        this.state = 147;
 	        _la = this._input.LA(1);
-	        if(!((((_la) & ~0x1f) === 0 && ((1 << _la) & 327696) !== 0))) {
+	        if(!((((_la) & ~0x1f) === 0 && ((1 << _la) & 1048610) !== 0))) {
 	        this._errHandler.recoverInline(this);
 	        }
 	        else {
@@ -665,17 +679,17 @@ export default class ElgolParser extends antlr4.Parser {
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 147;
+	        this.state = 149;
 	        this.elgioOperand();
-	        this.state = 153;
+	        this.state = 155;
 	        this._errHandler.sync(this);
 	        _la = this._input.LA(1);
-	        while((((_la) & ~0x1f) === 0 && ((1 << _la) & 15728640) !== 0)) {
-	            this.state = 148;
+	        while((((_la) & ~0x1f) === 0 && ((1 << _la) & 62914560) !== 0)) {
+	            this.state = 150;
 	            this.mathOp();
-	            this.state = 149;
+	            this.state = 151;
 	            this.elgioOperand();
-	            this.state = 155;
+	            this.state = 157;
 	            this._errHandler.sync(this);
 	            _la = this._input.LA(1);
 	        }
@@ -701,9 +715,9 @@ export default class ElgolParser extends antlr4.Parser {
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 156;
+	        this.state = 158;
 	        _la = this._input.LA(1);
-	        if(!((((_la) & ~0x1f) === 0 && ((1 << _la) & 327696) !== 0))) {
+	        if(!((((_la) & ~0x1f) === 0 && ((1 << _la) & 1048610) !== 0))) {
 	        this._errHandler.recoverInline(this);
 	        }
 	        else {
@@ -731,11 +745,11 @@ export default class ElgolParser extends antlr4.Parser {
 	    this.enterRule(localctx, 36, ElgolParser.RULE_logicalExpr);
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 158;
-	        this.logicalOperand();
-	        this.state = 159;
-	        this.relOp();
 	        this.state = 160;
+	        this.logicalOperand();
+	        this.state = 161;
+	        this.relOp();
+	        this.state = 162;
 	        this.logicalOperand();
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -759,9 +773,9 @@ export default class ElgolParser extends antlr4.Parser {
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 162;
+	        this.state = 164;
 	        _la = this._input.LA(1);
-	        if(!((((_la) & ~0x1f) === 0 && ((1 << _la) & 327696) !== 0))) {
+	        if(!((((_la) & ~0x1f) === 0 && ((1 << _la) & 1048610) !== 0))) {
 	        this._errHandler.recoverInline(this);
 	        }
 	        else {
@@ -790,9 +804,9 @@ export default class ElgolParser extends antlr4.Parser {
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 164;
+	        this.state = 166;
 	        _la = this._input.LA(1);
-	        if(!((((_la) & ~0x1f) === 0 && ((1 << _la) & 61440) !== 0))) {
+	        if(!((((_la) & ~0x1f) === 0 && ((1 << _la) & 122880) !== 0))) {
 	        this._errHandler.recoverInline(this);
 	        }
 	        else {
@@ -820,21 +834,21 @@ export default class ElgolParser extends antlr4.Parser {
 	    this.enterRule(localctx, 42, ElgolParser.RULE_whileStmt);
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 166;
-	        this.match(ElgolParser.ENQUANTO);
-	        this.state = 167;
-	        this.logicalExpr();
 	        this.state = 168;
-	        this.match(ElgolParser.PONTO);
+	        this.match(ElgolParser.ENQUANTO);
 	        this.state = 169;
-	        this.match(ElgolParser.INICIO);
+	        this.logicalExpr();
 	        this.state = 170;
 	        this.match(ElgolParser.PONTO);
 	        this.state = 171;
-	        this.statementList();
+	        this.match(ElgolParser.INICIO);
 	        this.state = 172;
-	        this.match(ElgolParser.FIM);
+	        this.match(ElgolParser.PONTO);
 	        this.state = 173;
+	        this.statementList();
+	        this.state = 174;
+	        this.match(ElgolParser.FIM);
+	        this.state = 175;
 	        this.match(ElgolParser.PONTO);
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -857,39 +871,39 @@ export default class ElgolParser extends antlr4.Parser {
 	    this.enterRule(localctx, 44, ElgolParser.RULE_ifStmt);
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 175;
-	        this.match(ElgolParser.SE);
-	        this.state = 176;
-	        this.logicalExpr();
 	        this.state = 177;
-	        this.match(ElgolParser.PONTO);
+	        this.match(ElgolParser.SE);
 	        this.state = 178;
-	        this.match(ElgolParser.ENTAO);
+	        this.logicalExpr();
 	        this.state = 179;
 	        this.match(ElgolParser.PONTO);
 	        this.state = 180;
-	        this.match(ElgolParser.INICIO);
+	        this.match(ElgolParser.ENTAO);
 	        this.state = 181;
 	        this.match(ElgolParser.PONTO);
 	        this.state = 182;
-	        this.statementList();
+	        this.match(ElgolParser.INICIO);
 	        this.state = 183;
-	        this.match(ElgolParser.FIM);
-	        this.state = 184;
 	        this.match(ElgolParser.PONTO);
+	        this.state = 184;
+	        this.statementList();
 	        this.state = 185;
-	        this.match(ElgolParser.SENAO);
+	        this.match(ElgolParser.FIM);
 	        this.state = 186;
 	        this.match(ElgolParser.PONTO);
 	        this.state = 187;
-	        this.match(ElgolParser.INICIO);
+	        this.match(ElgolParser.SENAO);
 	        this.state = 188;
 	        this.match(ElgolParser.PONTO);
 	        this.state = 189;
-	        this.statementList();
+	        this.match(ElgolParser.INICIO);
 	        this.state = 190;
-	        this.match(ElgolParser.FIM);
+	        this.match(ElgolParser.PONTO);
 	        this.state = 191;
+	        this.statementList();
+	        this.state = 192;
+	        this.match(ElgolParser.FIM);
+	        this.state = 193;
 	        this.match(ElgolParser.PONTO);
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -909,35 +923,37 @@ export default class ElgolParser extends antlr4.Parser {
 }
 
 ElgolParser.EOF = antlr4.Token.EOF;
-ElgolParser.ERRO_LEXICO = 1;
-ElgolParser.ELGIO = 2;
-ElgolParser.INTEIRO = 3;
-ElgolParser.ZERO = 4;
-ElgolParser.COMP = 5;
-ElgolParser.ENQUANTO = 6;
-ElgolParser.SE = 7;
-ElgolParser.ENTAO = 8;
-ElgolParser.SENAO = 9;
-ElgolParser.INICIO = 10;
-ElgolParser.FIM = 11;
-ElgolParser.MAIOR = 12;
-ElgolParser.MENOR = 13;
-ElgolParser.IGUAL = 14;
-ElgolParser.DIFERENTE = 15;
-ElgolParser.ID = 16;
-ElgolParser.FUNCAO = 17;
-ElgolParser.NUM = 18;
-ElgolParser.ASSIGN = 19;
-ElgolParser.MAIS = 20;
-ElgolParser.MENOS = 21;
-ElgolParser.MULT = 22;
-ElgolParser.DIV = 23;
-ElgolParser.LPAREN = 24;
-ElgolParser.RPAREN = 25;
-ElgolParser.PONTO = 26;
-ElgolParser.VIRGULA = 27;
-ElgolParser.COMENTARIO = 28;
-ElgolParser.WS = 29;
+ElgolParser.ID = 1;
+ElgolParser.ERRO_LEXICO = 2;
+ElgolParser.ELGIO = 3;
+ElgolParser.INTEIRO = 4;
+ElgolParser.ZERO = 5;
+ElgolParser.COMP = 6;
+ElgolParser.ENQUANTO = 7;
+ElgolParser.SE = 8;
+ElgolParser.ENTAO = 9;
+ElgolParser.SENAO = 10;
+ElgolParser.INICIO = 11;
+ElgolParser.FIM = 12;
+ElgolParser.MAIOR = 13;
+ElgolParser.MENOR = 14;
+ElgolParser.IGUAL = 15;
+ElgolParser.DIFERENTE = 16;
+ElgolParser.IDENTIFICADOR_POTENCIAL = 17;
+ElgolParser.FUNCAO_POTENCIAL = 18;
+ElgolParser.FUNCAO = 19;
+ElgolParser.NUM = 20;
+ElgolParser.ASSIGN = 21;
+ElgolParser.MAIS = 22;
+ElgolParser.MENOS = 23;
+ElgolParser.MULT = 24;
+ElgolParser.DIV = 25;
+ElgolParser.LPAREN = 26;
+ElgolParser.RPAREN = 27;
+ElgolParser.PONTO = 28;
+ElgolParser.VIRGULA = 29;
+ElgolParser.COMENTARIO = 30;
+ElgolParser.WS = 31;
 
 ElgolParser.RULE_program = 0;
 ElgolParser.RULE_functionDecl = 1;
@@ -1310,6 +1326,14 @@ class StatementContext extends antlr4.ParserRuleContext {
 
 	ifStmt() {
 	    return this.getTypedRuleContext(IfStmtContext,0);
+	};
+
+	ID() {
+	    return this.getToken(ElgolParser.ID, 0);
+	};
+
+	PONTO() {
+	    return this.getToken(ElgolParser.PONTO, 0);
 	};
 
 	enterRule(listener) {

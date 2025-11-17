@@ -1,187 +1,90 @@
 parser grammar ElgolParser;
 
 options {
-  tokenVocab = ElgolLexer; // usa os tokens do seu lexer
+	tokenVocab = ElgolLexer;
+	// usa os tokens do seu lexer
 }
 
-// -------------------------------------------------------------------
-// Regra inicial: programa = (funções)* + bloco principal
-// -------------------------------------------------------------------
-program
-    : (functionDecl)* mainBlock EOF
-    ;
+// ------------------------------------------------------------------- Regra inicial: programa =
+// (funções)* + bloco principal -------------------------------------------------------------------
+program: (functionDecl)* mainBlock EOF;
 
+// ------------------------------------------------------------------- Funções inteiro _Func
+// (inteiro Num, inteiro Dois) . inicio . ... fim.
 // -------------------------------------------------------------------
-// Funções
-// inteiro _Func (inteiro Num, inteiro Dois) .
-// inicio .
-//   ...
-// fim.
-// -------------------------------------------------------------------
-functionDecl
-    : INTEIRO FUNCAO LPAREN paramList? RPAREN PONTO
-      INICIO PONTO
-      statementList
-      FIM PONTO
-    ;
+functionDecl:
+	INTEIRO FUNCAO LPAREN paramList? RPAREN PONTO INICIO PONTO statementList FIM PONTO;
 
-paramList
-    : param (VIRGULA param)*
-    ;
+paramList: param (VIRGULA param)*;
 
-param
-    : INTEIRO ID
-    ;
+param: INTEIRO ID;
 
-// -------------------------------------------------------------------
-// Bloco principal
-// inicio.
-//   ...
-// fim.
-// -------------------------------------------------------------------
-mainBlock
-    : INICIO PONTO
-      statementList
-      FIM PONTO
-    ;
+// ------------------------------------------------------------------- Bloco principal inicio. ...
+// fim. -------------------------------------------------------------------
+mainBlock: INICIO PONTO statementList FIM PONTO;
 
 // lista de comandos
-statementList
-    : (statement)*
-    ;
+statementList: (statement)*;
 
+// ------------------------------------------------------------------- Tipos de comandos
 // -------------------------------------------------------------------
-// Tipos de comandos
-// -------------------------------------------------------------------
-statement
-    : varDecl
-    | assignment
-    | elgioAssignment
-    | whileStmt
-    | ifStmt
-    ;
+statement:
+	varDecl
+	| assignment
+	| elgioAssignment
+	| whileStmt
+	| ifStmt
+	| ID PONTO;
 
 // Declaração de variável: inteiro ID.
-varDecl
-    : INTEIRO ID PONTO
-    ;
+varDecl: INTEIRO ID PONTO;
 
 // Atribuição normal: ID = exprMat .
-assignment
-    : ID ASSIGN mathExpr PONTO
-    ;
+assignment: ID ASSIGN mathExpr PONTO;
 
-// Atribuição com elgio (sem função na expressão!):
-// elgio = exprSemFunc .
-elgioAssignment
-    : ELGIO ASSIGN elgioExpr PONTO
-    ;
+// Atribuição com elgio (sem função na expressão!): elgio = exprSemFunc .
+elgioAssignment: ELGIO ASSIGN elgioExpr PONTO;
 
+// ------------------------------------------------------------------- Expressões matemáticas (SEM
+// precedência) expr = operando (op operando)*
 // -------------------------------------------------------------------
-// Expressões matemáticas (SEM precedência)
-// expr = operando (op operando)*
-// -------------------------------------------------------------------
-mathExpr
-    : mathOperand (mathOp mathOperand)*
-    ;
+mathExpr: mathOperand (mathOp mathOperand)*;
 
-mathOp
-    : MAIS
-    | MENOS
-    | MULT
-    | DIV
-    ;
+mathOp: MAIS | MENOS | MULT | DIV;
 
 // Em expressão normal PODE ter chamada de função
-mathOperand
-    : NUM
-    | ZERO
-    | ID
-    | funcCall
-    ;
+mathOperand: NUM | ZERO | ID | funcCall;
 
-// Chamada de função: FUNCAO ( argList? )
-// Parâmetros só podem ser NUM, ZERO ou ID
-funcCall
-    : FUNCAO LPAREN argList? RPAREN
-    ;
+// Chamada de função: FUNCAO ( argList? ) Parâmetros só podem ser NUM, ZERO ou ID
+funcCall: FUNCAO LPAREN argList? RPAREN;
 
-argList
-    : arg (VIRGULA arg)*
-    ;
+argList: arg (VIRGULA arg)*;
 
-arg
-    : NUM
-    | ZERO
-    | ID
-    ;
+arg: NUM | ZERO | ID;
 
+// ------------------------------------------------------------------- Expressão do elgio: igual à
+// mathExpr, porém SEM função -------------------------------------------------------------------
+elgioExpr: elgioOperand (mathOp elgioOperand)*;
+
+elgioOperand: NUM | ZERO | ID;
+
+// ------------------------------------------------------------------- Expressões lógicas (enquanto,
+// se) apenas 2 operandos e 1 oper relacional
 // -------------------------------------------------------------------
-// Expressão do elgio: igual à mathExpr, porém SEM função
-// -------------------------------------------------------------------
-elgioExpr
-    : elgioOperand (mathOp elgioOperand)*
-    ;
+logicalExpr: logicalOperand relOp logicalOperand;
 
-elgioOperand
-    : NUM
-    | ZERO
-    | ID
-    ;
+logicalOperand: ID | NUM | ZERO;
 
-// -------------------------------------------------------------------
-// Expressões lógicas (enquanto, se)
-// apenas 2 operandos e 1 oper relacional
-// -------------------------------------------------------------------
-logicalExpr
-    : logicalOperand relOp logicalOperand
-    ;
+relOp: MAIOR | MENOR | IGUAL | DIFERENTE;
 
-logicalOperand
-    : ID
-    | NUM
-    | ZERO
-    ;
+// ------------------------------------------------------------------- enquanto ExprLogica. inicio.
+// statements fim. -------------------------------------------------------------------
+whileStmt:
+	ENQUANTO logicalExpr PONTO INICIO PONTO statementList FIM PONTO;
 
-relOp
-    : MAIOR
-    | MENOR
-    | IGUAL
-    | DIFERENTE
-    ;
-
+// ------------------------------------------------------------------- se ExprLogica. entao. inicio.
+// statements fim. senao. inicio. statements fim.
 // -------------------------------------------------------------------
-// enquanto ExprLogica.
-// inicio.
-//    statements
-// fim.
-// -------------------------------------------------------------------
-whileStmt
-    : ENQUANTO logicalExpr PONTO
-      INICIO PONTO
-      statementList
-      FIM PONTO
-    ;
-
-// -------------------------------------------------------------------
-// se ExprLogica.
-// entao.
-// inicio.
-//   statements
-// fim.
-// senao.
-// inicio.
-//   statements
-// fim.
-// -------------------------------------------------------------------
-ifStmt
-    : SE logicalExpr PONTO
-      ENTAO PONTO
-      INICIO PONTO
-      statementList
-      FIM PONTO
-      SENAO PONTO
-      INICIO PONTO
-      statementList
-      FIM PONTO
-    ;
+ifStmt:
+	SE logicalExpr PONTO ENTAO PONTO INICIO PONTO statementList FIM PONTO SENAO PONTO INICIO PONTO
+		statementList FIM PONTO;
