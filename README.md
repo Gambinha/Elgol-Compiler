@@ -1,4 +1,4 @@
 1. Criamos o arquivo "ElgolLexer.g4", com as definições léxicas da linguagem Elgol.
-2. Utilizamos o Antlr para gerar o analisar léxico em Javascript, executando o comando "antlr4 -Dlanguage=JavaScript util/ElgolLexer.g4", que gerou o arquivo "util/ElgolLexer.js".
+2. Utilizamos o Antlr para gerar o analisar léxico em Javascript, executando o comando "antlr4 -Dlanguage=JavaScript util/ElgolLexer.g4 util/ElgolParser.g4", que gerou o arquivo "util/ElgolLexer.js", "util/ElgolParser.js" e o ""util/ElgolParserListener.js".
 
-Para executar a análise léxica, rode o comando "npm run analisar-lex". O resultado dos tokens será escrito no arquivo "src resultado-analise-lexica.txt".
+No arquivo "/src/tests.js" ocorre a execução do analisador para os 5 exemplos disponívels. Basta descomentar o exemplo no Array. E, para rodar, "node src/tests.js".
